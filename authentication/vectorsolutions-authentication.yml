@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: openapi/vectorsolutions-targetsolutions-openapi.yml
+docs: https://developers.targetsolutions.com/worldoftargetsolutions
+notes: TargetSolutions implements a basic-auth-over-HTTPS scheme requiring a customer-specific
+  API token in the AccessToken header of all requests. Tokens are requested from the
+  customer's account manager and can be issued read-only or feature-specific. Documented
+  on the developer portal getting-started page.
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: AccessToken
+  type: apiKey
+  in: header
+  parameter: AccessToken
+  description: Customer-specific API token passed in the header of all requests over HTTPS.
+    Requested from your TargetSolutions account manager; tokens can be read-only or feature-specific.
+  sources:
+  - openapi/vectorsolutions-targetsolutions-openapi.yml

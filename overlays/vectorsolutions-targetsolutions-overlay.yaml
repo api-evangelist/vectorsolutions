@@ -1,0 +1,28 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for TargetSolutions API
+  version: 1.0.0
+  x-provenance:
+    generated: '2026-07-21'
+    method: generated
+    source: openapi/vectorsolutions-targetsolutions-openapi.yml
+extends: openapi/vectorsolutions-targetsolutions-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-apievangelist:
+      provider: vectorsolutions
+      profile: https://raw.githubusercontent.com/api-evangelist/vectorsolutions/refs/heads/main/apis.yml
+      developer-portal: https://developers.targetsolutions.com/
+      error-catalog: errors/vectorsolutions-problem-types.yml
+      conventions: conventions/vectorsolutions-conventions.yml
+      sandbox: sandbox/vectorsolutions-sandbox.yml
+- target: $.info
+  update:
+    x-audience: customer-integrators
+    x-notes: Payload schemas are not published by the provider; request and response
+      bodies are intentionally untyped pending provider documentation.
+- target: $.components.securitySchemes.AccessToken
+  update:
+    x-token-issuance: Tokens are issued per customer by a TargetSolutions account
+      manager and may be read-only or feature-scoped.

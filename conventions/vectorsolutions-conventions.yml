@@ -1,0 +1,49 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.targetsolutions.com/worldoftargetsolutions
+notes: Cross-cutting request/response semantics of the TargetSolutions API v1,
+  captured from the developer portal (getting started, FAQ, HTTP status codes,
+  error codes) and the generated OpenAPI. See also errors/vectorsolutions-problem-types.yml,
+  lifecycle/vectorsolutions-lifecycle.yml, authentication/vectorsolutions-authentication.yml.
+authentication:
+  style: api-key-header
+  header: AccessToken
+  transport: HTTPS only
+  notes: Customer-specific token requested from an account manager; read-only and
+    feature-specific token scopes are available. See authentication/vectorsolutions-authentication.yml.
+idempotency:
+  supported: false
+  notes: No idempotency key header or replay-safety contract is documented.
+pagination:
+  style: none-documented
+  notes: The developer portal does not document pagination parameters or response fields.
+search:
+  style: json-query-parameter
+  parameter: q
+  format: 'q={"key":"value"} - a JSON object passed as the q query parameter on
+    collection GET routes.'
+  errors: Invalid search JSON returns application error 902 (INVALID JSON); invalid
+    parameters return 903; routes that do not accept search parameters return 904
+    (NOT SEARCHABLE).
+field_expansion:
+  supported: false
+  notes: No field expansion or sparse-fieldset support is documented.
+request_tracing:
+  header: null
+  notes: No request-id tracing header is documented.
+versioning:
+  scheme: uri-path
+  current: v1
+error_envelope:
+  format: json
+  notes: Errors are JSON with application-level error codes (700-1006) documented
+    alongside HTTP status codes; no formal envelope schema or RFC 9457
+    application/problem+json support is published.
+rate_limiting:
+  signal: HTTP 429
+  notes: HTTP 429 TOO MANY REQUESTS ("Your application is sending too many
+    simultaneous requests") is documented; no numeric limits or rate-limit
+    response headers are published.
+content_types:
+  request: application/json
+  response: application/json

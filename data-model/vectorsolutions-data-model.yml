@@ -1,0 +1,105 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/vectorsolutions-targetsolutions-openapi.yml
+notes: Entity-relationship graph derived from the TargetSolutions API v1 route
+  hierarchy (the provider publishes no payload schemas, so relationships are
+  inferred from URI structure and path identifiers).
+entities:
+- name: Site
+  id_param: siteid
+  description: A customer site (organization/platform instance).
+- name: User
+  id_param: userid
+  description: A platform user belonging to a site.
+- name: Email
+  id_param: emailid
+  description: An email address attached to a user.
+- name: ProfileCategory
+  id_param: categoryid
+  description: An organization-profile category grouping profile groups.
+- name: ProfileGroup
+  id_param: groupid
+  description: A group within a profile category; users are assigned as members.
+- name: AccessModule
+  id_param: accessmoduleid
+  description: An application feature that can be granted to users (supervisor access).
+- name: CredentialCategory
+  id_param: categoryid
+  description: A category grouping credentials.
+- name: Credential
+  id_param: credentialid
+  description: A certification/credential definition.
+- name: CredentialAssignment
+  id_param: assignmentid
+  description: The assignment of a credential to a user.
+- name: Course
+  id_param: courseid
+  description: A training course or activity.
+- name: TrainingAssignment
+  id_param: transcriptid
+  description: The assignment of a course to a user (transcript record).
+relationships:
+- from: Site
+  to: User
+  kind: has_many
+  via: /sites/{siteid}/users
+- from: User
+  to: Email
+  kind: has_many
+  via: /users/{userid}/emails
+- from: ProfileCategory
+  to: ProfileGroup
+  kind: has_many
+  via: /sites/categories/profile/{categoryid}/groups
+- from: ProfileGroup
+  to: User
+  kind: has_many
+  via: /sites/{siteid}/categories/profile/{categoryid}/groups/{groupid}/users
+- from: User
+  to: ProfileGroup
+  kind: has_many
+  via: /users/{userid}/groups
+- from: User
+  to: ProfileGroup
+  kind: has_many
+  via: /users/{userid}/access/groups (supervisor access over groups)
+- from: User
+  to: AccessModule
+  kind: has_many
+  via: /users/{userid}/access/modules
+- from: Site
+  to: AccessModule
+  kind: has_many
+  via: /sites/{siteid}/access/modules
+- from: CredentialCategory
+  to: Credential
+  kind: has_many
+  via: /sites/categories/credential/{categoryid}/credentials
+- from: Credential
+  to: CredentialAssignment
+  kind: has_many
+  via: /credentials/{credentialid}/assignments
+- from: User
+  to: CredentialAssignment
+  kind: has_many
+  via: /users/{userid}/credentials
+- from: Site
+  to: Course
+  kind: has_many
+  via: /sites/{siteid}/courses
+- from: User
+  to: TrainingAssignment
+  kind: has_many
+  via: /users/{userid}/trainingassignments
+- from: Course
+  to: TrainingAssignment
+  kind: has_many
+  via: /sites/{siteid}/course/{courseid}/trainingassignments
+- from: TrainingAssignment
+  to: User
+  kind: belongs_to
+  via: /trainingassignments/user/{userid}/course/{courseid}
+- from: TrainingAssignment
+  to: Course
+  kind: belongs_to
+  via: /trainingassignments/user/{userid}/course/{courseid}

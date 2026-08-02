@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: openapi/vectorsolutions-targetsolutions-openapi.yml + developers.targetsolutions.com
+  documentation + vectorsolutions.com press releases
+standards:
+- id: soc2-type1
+  conforms: true
+  evidence: Vector Solutions announced successful completion of its annual SOC 2
+    Type 1 examination (AICPA System and Organization Controls audit) in a press
+    release on its own site (published 2021-05-14, last updated 2023-08-30). No
+    public trust center page is published.
+  url: https://www.vectorsolutions.com/resources/press-releases/vector-solutions-successfully-completes-annual-soc-2-type-1-examination/
+- id: oauth2
+  conforms: false
+  evidence: Authentication is a proprietary customer-specific AccessToken header
+    (apiKey style), not OAuth 2.0.
+- id: oidc
+  conforms: false
+  evidence: No OpenID Connect support; /.well-known/openid-configuration probes
+    returned no valid discovery document on any host.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors are plain JSON with proprietary application error codes
+    (700-1006), not application/problem+json.
+- id: json-api
+  conforms: false
+  evidence: Plain JSON resources; no JSON:API media type or document structure documented.
+- id: rest-resource-modeling
+  conforms: true
+  evidence: Resource-oriented URI hierarchy (sites, users, credentials, courses,
+    trainingassignments) with GET/POST/PUT/DELETE semantics documented per route.
+- id: pagination
+  conforms: false
+  evidence: No pagination convention is documented in the developer portal.
+- id: idempotency
+  conforms: false
+  evidence: No idempotency key contract is documented.
+- id: scim
+  conforms: false
+  evidence: User management uses proprietary /users routes, not SCIM 2.0 paths or schemas.
+- id: rate-limit-signaling
+  conforms: true
+  evidence: HTTP 429 TOO MANY REQUESTS is documented in the HTTP status code reference.

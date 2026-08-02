@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: live HTTP probes of /.well-known/ paths on apis.yml + OpenAPI hosts
+notes: No well-known discovery documents are published. The 200 on
+  developers.targetsolutions.com/.well-known/openid-configuration is a false
+  positive - it returns an HTML framework error page (FW1.viewNotFound), not an
+  OIDC discovery document, so no raw file was saved.
+hosts:
+- host: https://www.vectorsolutions.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://api.targetsolutions.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+- host: https://developers.targetsolutions.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: HTML error page (FW1.viewNotFound), not a valid OIDC discovery document; not saved
+- host: https://www.targetsolutions.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404

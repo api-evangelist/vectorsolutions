@@ -1,0 +1,40 @@
+{
+  "provider": "vectorsolutions",
+  "sources": [
+    "vectorsolutions-courses-api-openapi.yml",
+    "vectorsolutions-credential-assignment-api-openapi.yml",
+    "vectorsolutions-credential-categories-api-openapi.yml",
+    "vectorsolutions-credentials-api-openapi.yml",
+    "vectorsolutions-feature-access-api-openapi.yml",
+    "vectorsolutions-profile-categories-api-openapi.yml",
+    "vectorsolutions-profile-group-assignment-api-openapi.yml",
+    "vectorsolutions-profile-groups-api-openapi.yml",
+    "vectorsolutions-sites-api-openapi.yml",
+    "vectorsolutions-supervisor-access-api-openapi.yml",
+    "vectorsolutions-training-assignments-api-openapi.yml",
+    "vectorsolutions-user-emails-api-openapi.yml",
+    "vectorsolutions-user-history-api-openapi.yml",
+    "vectorsolutions-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "vectorsolutions-courses-api-openapi.yml",
+    "vectorsolutions-credential-assignment-api-openapi.yml",
+    "vectorsolutions-credential-categories-api-openapi.yml",
+    "vectorsolutions-credentials-api-openapi.yml",
+    "vectorsolutions-feature-access-api-openapi.yml",
+    "vectorsolutions-profile-categories-api-openapi.yml",
+    "vectorsolutions-profile-group-assignment-api-openapi.yml",
+    "vectorsolutions-profile-groups-api-openapi.yml",
+    "vectorsolutions-sites-api-openapi.yml",
+    "vectorsolutions-supervisor-access-api-openapi.yml",
+    "vectorsolutions-training-assignments-api-openapi.yml",
+    "vectorsolutions-user-emails-api-openapi.yml",
+    "vectorsolutions-user-history-api-openapi.yml",
+    "vectorsolutions-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

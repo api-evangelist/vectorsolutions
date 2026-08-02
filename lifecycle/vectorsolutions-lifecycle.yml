@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.targetsolutions.com/worldoftargetsolutions
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://developers.targetsolutions.com/worldoftargetsolutions
+  notes: Version is carried in the URL path (https://api.targetsolutions.com/v1).
+    No published versioning or release cadence policy was found.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No deprecation policy or RFC 8594 Sunset header support is documented.
+sla:
+  url: null
+  notes: No public SLA was found.
+status_page: null
+status_page_notes: No public status page was found (status.targetsolutions.com and
+  status.vectorsolutions.com do not resolve).
+deprecated_operations: []

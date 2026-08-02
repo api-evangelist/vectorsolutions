@@ -1,0 +1,12 @@
+generated: '2026-07-21'
+method: generated
+source: openapi/vectorsolutions-targetsolutions-openapi.yml
+skills:
+- file: vectorsolutions-onboard-user-and-assign-training.md
+  name: Onboard a user and assign training
+  api: openapi/vectorsolutions-targetsolutions-openapi.yml
+  operations: [getSites, createSiteUser, getUser, getSiteCourses, createTrainingAssignment, getUserTrainingAssignments]
+- file: vectorsolutions-manage-credentials.md
+  name: Track and assign credentials
+  api: openapi/vectorsolutions-targetsolutions-openapi.yml
+  operations: [getCredentialCategories, getCategoryCredentials, getCredential, getUserCredentials, createCredentialAssignment, updateCredentialAssignment, deleteCredentialAssignment]

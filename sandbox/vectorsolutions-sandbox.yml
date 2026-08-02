@@ -1,0 +1,19 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.targetsolutions.com/worldoftargetsolutions
+sandbox:
+  host: https://devsandbox.targetsolutions.com/v1
+  production_host: https://api.targetsolutions.com/v1
+  separation: Separate sandbox host; same customer-specific AccessToken header
+    authentication scheme as production.
+  data: The sandbox points to a development server that is refreshed nightly with
+    live data - it mirrors the customer's site data as of midnight the previous
+    night, preventing accidental changes to production data.
+  verification: The sandbox is not front-facing; changes made through the API
+    cannot be viewed in the platform UI. Use API GET functions (e.g. GET
+    /users/{userid}) to verify modifications (documented in the developer portal FAQ).
+  access: API tokens are customer-specific and must be requested from a
+    TargetSolutions account manager; tokens can be issued read-only or
+    feature-specific.
+  test_values: none published - no magic test identifiers, test cards, or fixture
+    tooling are documented.

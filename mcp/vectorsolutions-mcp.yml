@@ -1,0 +1,221 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: openapi/vectorsolutions-targetsolutions-openapi.yml
+notes: No official MCP server was found for Vector Solutions or TargetSolutions. This is a candidate tool surface
+  derived from the TargetSolutions API v1 operations documented at https://developers.targetsolutions.com/documentation/routes.
+server:
+  name: vectorsolutions-targetsolutions
+  transport: http
+  url: null
+tools:
+- name: get_sites
+  description: Retrieve all sites
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSites
+- name: get_site
+  description: Retrieve a specific site
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSite
+- name: get_users
+  description: Retrieve all users
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getUsers
+- name: get_all_sites_users
+  description: Retrieve all users across sites
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getAllSitesUsers
+- name: get_site_users
+  description: Retrieve users within a site
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSiteUsers
+- name: create_site_user
+  description: Create a new user
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#createSiteUser
+- name: get_user
+  description: Retrieve a specific user
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getUser
+- name: update_user
+  description: Modify user details
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#updateUser
+- name: get_user_emails
+  description: Retrieve all user emails
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getUserEmails
+- name: add_user_email
+  description: Add an email address
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#addUserEmail
+- name: get_user_email
+  description: Retrieve a specific email
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getUserEmail
+- name: delete_user_email
+  description: Remove an email
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#deleteUserEmail
+- name: get_users_history
+  description: Retrieve all user changes across sites
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getUsersHistory
+- name: get_user_history
+  description: Retrieve changes for a user
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getUserHistory
+- name: get_site_users_history
+  description: Retrieve changes for site users
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSiteUsersHistory
+- name: get_profile_categories
+  description: Retrieve all profile categories
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getProfileCategories
+- name: get_site_profile_categories
+  description: Retrieve site profile categories
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSiteProfileCategories
+- name: get_profile_category
+  description: Retrieve a profile category
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getProfileCategory
+- name: get_site_profile_category
+  description: Retrieve a site-specific profile category
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSiteProfileCategory
+- name: get_profile_groups
+  description: Retrieve groups in a profile category
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getProfileGroups
+- name: get_site_profile_groups
+  description: Retrieve site profile groups
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSiteProfileGroups
+- name: create_profile_group
+  description: Create a profile group
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#createProfileGroup
+- name: get_profile_group
+  description: Retrieve a profile group
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getProfileGroup
+- name: get_site_profile_group
+  description: Retrieve a site profile group
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSiteProfileGroup
+- name: update_profile_group
+  description: Modify a profile group
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#updateProfileGroup
+- name: delete_profile_group
+  description: Remove a profile group
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#deleteProfileGroup
+- name: get_profile_group_users
+  description: Retrieve profile group members
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getProfileGroupUsers
+- name: get_site_profile_group_users
+  description: Retrieve site profile group members
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSiteProfileGroupUsers
+- name: add_user_to_profile_group
+  description: Add a user to a profile group
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#addUserToProfileGroup
+- name: get_user_groups
+  description: Retrieve a user's profile groups
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getUserGroups
+- name: get_user_group
+  description: Retrieve a user's specific profile group
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getUserGroup
+- name: remove_user_from_profile_group
+  description: Remove a user from a profile group
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#removeUserFromProfileGroup
+- name: get_access_groups
+  description: Retrieve assignable profile groups
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getAccessGroups
+- name: get_access_group
+  description: Retrieve an assignable profile group
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getAccessGroup
+- name: get_user_access_groups
+  description: Retrieve groups a user manages
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getUserAccessGroups
+- name: get_access_group_users
+  description: Retrieve group supervisors
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getAccessGroupUsers
+- name: grant_group_access
+  description: Grant supervisor access over a profile group
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#grantGroupAccess
+- name: revoke_group_access
+  description: Revoke supervisor access over a profile group
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#revokeGroupAccess
+- name: get_access_modules
+  description: Retrieve assignable application features
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getAccessModules
+- name: get_access_module
+  description: Retrieve an application feature
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getAccessModule
+- name: get_user_access_modules
+  description: Retrieve a user's feature access
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getUserAccessModules
+- name: get_user_access_module
+  description: Retrieve a user's specific feature access
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getUserAccessModule
+- name: revoke_module_access
+  description: Revoke access to an application feature
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#revokeModuleAccess
+- name: get_access_module_users
+  description: Retrieve users with a feature
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getAccessModuleUsers
+- name: grant_module_access
+  description: Grant access to an application feature
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#grantModuleAccess
+- name: get_credential_categories
+  description: Retrieve all credential categories
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getCredentialCategories
+- name: get_site_credential_categories
+  description: Retrieve site credential categories
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSiteCredentialCategories
+- name: get_credential_category
+  description: Retrieve a credential category
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getCredentialCategory
+- name: get_site_credential_category
+  description: Retrieve a site credential category
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSiteCredentialCategory
+- name: get_credentials
+  description: Retrieve all credentials
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getCredentials
+- name: get_credential
+  description: Retrieve a specific credential
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getCredential
+- name: get_category_credentials
+  description: Retrieve credentials in a category
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getCategoryCredentials
+- name: get_site_category_credentials
+  description: Retrieve site credentials in a category
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSiteCategoryCredentials
+- name: get_user_credentials
+  description: Retrieve a user's credentials
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getUserCredentials
+- name: get_credential_assignments
+  description: Retrieve credential assignments
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getCredentialAssignments
+- name: create_credential_assignment
+  description: Create a credential assignment
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#createCredentialAssignment
+- name: get_credential_assignment
+  description: Retrieve a specific credential assignment
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getCredentialAssignment
+- name: update_credential_assignment
+  description: Modify a credential assignment
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#updateCredentialAssignment
+- name: delete_credential_assignment
+  description: Remove a credential assignment
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#deleteCredentialAssignment
+- name: get_courses
+  description: Retrieve all courses
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getCourses
+- name: get_course
+  description: Retrieve a specific course
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getCourse
+- name: get_site_course
+  description: Retrieve a site-specific course
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSiteCourse
+- name: get_site_courses
+  description: Retrieve all site courses and activities
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSiteCourses
+- name: get_site_training_assignments
+  description: Retrieve site training assignments
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getSiteTrainingAssignments
+- name: get_training_assignment
+  description: Retrieve a specific training assignment
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getTrainingAssignment
+- name: update_training_assignment
+  description: Modify a training assignment
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#updateTrainingAssignment
+- name: delete_training_assignment
+  description: Remove a training assignment
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#deleteTrainingAssignment
+- name: create_training_assignment
+  description: Create a training assignment for a user and course
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#createTrainingAssignment
+- name: get_user_training_assignments
+  description: Retrieve a user's training assignments
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getUserTrainingAssignments
+- name: get_course_training_assignments
+  description: Retrieve training assignments for a course
+  source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getCourseTrainingAssignments

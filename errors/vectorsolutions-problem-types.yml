@@ -1,0 +1,121 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.targetsolutions.com/documentation/errorcodes
+format: custom
+notes: TargetSolutions documents application-level error codes (700-1006) alongside
+  standard HTTP status codes (https://developers.targetsolutions.com/documentation/httpcodes).
+  Errors are returned as JSON; the docs do not publish a formal envelope schema and
+  the API does not use RFC 9457 application/problem+json.
+http_status_codes:
+- status: 200
+  title: OK
+  description: The request was successful and the response body contains the representation requested.
+- status: 201
+  title: CREATED
+  description: The request has been fulfilled and resulted in a new resource being created.
+- status: 202
+  title: ACCEPTED
+  description: The request has been accepted for processing, but the processing has not been completed.
+- status: 302
+  title: FOUND
+  description: A common redirect response; you can GET the representation at the URI in the Location response header.
+- status: 304
+  title: NOT MODIFIED
+  description: Your client's cached version of the representation is still up to date.
+- status: 400
+  title: BAD REQUEST
+  description: The request was invalid or cannot be otherwise served. An accompanying error message will explain further.
+- status: 401
+  title: UNAUTHORIZED
+  description: The supplied credentials, if any, are not sufficient to access the resource.
+- status: 403
+  title: FORBIDDEN
+  description: The server understood the request, but is refusing to fulfill it. Authorization will not help and the request SHOULD NOT be repeated.
+- status: 404
+  title: NOT FOUND
+  description: The requested resource was not found.
+- status: 405
+  title: METHOD NOT ALLOWED
+  description: A request was made of a resource using a request method not supported by that resource.
+- status: 409
+  title: CONFLICT
+  description: The request could not be completed due to a conflict with the current state of the resource.
+- status: 429
+  title: TOO MANY REQUESTS
+  description: Your application is sending too many simultaneous requests.
+- status: 500
+  title: SERVER ERROR
+  description: We couldn't return the representation due to an internal server error.
+- status: 503
+  title: SERVICE UNAVAILABLE
+  description: We are temporarily unable to return the representation. Please wait for a bit and try again.
+problems:
+- code: 701
+  title: CREATED
+  detail: The request has been fulfilled and resulted in a new resource being created.
+- code: 702
+  title: ACCEPTED
+  detail: The request has been fulfilled and resulted in a resource being updated.
+- code: 703
+  title: ACCEPTED
+  detail: The request has been fulfilled and resulted in a resource being deleted.
+- code: 704
+  title: BADREQUEST
+  detail: The request did not contain valid json.
+  remediation: Verify JSON formatting in the request body.
+- code: 705
+  title: DUPLICATE
+  detail: Duplicate data has been sent.
+  remediation: Remove duplicate entries before resubmitting.
+- code: 800
+  title: ACCESS DENIED
+  detail: A request was made to a resource that you do not have ownership of.
+  remediation: Verify resource ownership permissions.
+- code: 801
+  title: ACCESS DENIED
+  detail: Access Token not passed.
+  remediation: Include the AccessToken header in the request.
+- code: 802
+  title: ACCESS DENIED
+  detail: Invalid Access Token.
+  remediation: Obtain and use a valid token from your account manager.
+- code: 900
+  title: NOT IMPLEMENTED
+  detail: The requested resource not implemented.
+- code: 901
+  title: OK
+  detail: The request returned zero results.
+- code: 902
+  title: INVALID JSON
+  detail: The search string does not contain valid json.
+  remediation: Correct the JSON formatting of the q search parameter.
+- code: 903
+  title: INVALID SEARCH PARAMS
+  detail: The search parameters are invalid.
+- code: 904
+  title: NOT SEARCHABLE
+  detail: The request does not allow passing searchable parameters.
+  remediation: Remove search parameters from this endpoint.
+- code: 1000
+  title: INVALID ARGUMENTS
+  detail: The request did not contain required parameters to complete.
+- code: 1001
+  title: INVALID ARGUMENTS
+  detail: The request contained parameters that did not pass validation.
+- code: 1002
+  title: CONFLICT
+  detail: The request not created because it is not unique.
+- code: 1003
+  title: NOT MODIFIED
+  detail: The resource not modified.
+- code: 1004
+  title: DEPENDENCY
+  detail: The resource has dependencies that need to be removed first.
+  remediation: Remove dependent resources before deletion.
+- code: 1005
+  title: BADREQUEST
+  detail: The request did not contain any valid parameters to fulfill the request.
+- code: 1006
+  title: EXTERNAL DEPENDENCY
+  detail: The request could not be completed currently due to an external system being unavailable.
+  remediation: Retry the request when the external system is accessible.
