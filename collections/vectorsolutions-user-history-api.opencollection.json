@@ -1,0 +1,83 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TargetSolutions Courses User History API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "AccessToken",
+      "value": "{{AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "User History",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve all user changes across sites",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/users/history",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "JSON search filter, e.g. q={\"key\":\"value\"} (documented in the developer portal FAQ)."
+              }
+            ]
+          },
+          "docs": "Retrieve all user changes across sites."
+        },
+        {
+          "info": {
+            "name": "Retrieve changes for a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/history",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve changes for a user."
+        },
+        {
+          "info": {
+            "name": "Retrieve changes for site users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/users/history",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve changes for site users."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

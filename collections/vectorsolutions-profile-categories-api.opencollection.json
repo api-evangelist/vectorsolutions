@@ -1,0 +1,108 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TargetSolutions Courses Profile Categories API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "AccessToken",
+      "value": "{{AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Profile Categories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve all profile categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/categories/profile",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "JSON search filter, e.g. q={\"key\":\"value\"} (documented in the developer portal FAQ)."
+              }
+            ]
+          },
+          "docs": "Retrieve all profile categories."
+        },
+        {
+          "info": {
+            "name": "Retrieve site profile categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/categories/profile",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve site profile categories."
+        },
+        {
+          "info": {
+            "name": "Retrieve a profile category",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/categories/profile/:categoryid",
+            "params": [
+              {
+                "name": "categoryid",
+                "value": "",
+                "type": "path",
+                "description": "Category identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a profile category."
+        },
+        {
+          "info": {
+            "name": "Retrieve a site-specific profile category",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/categories/profile/:categoryid",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "categoryid",
+                "value": "",
+                "type": "path",
+                "description": "Category identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a site-specific profile category."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

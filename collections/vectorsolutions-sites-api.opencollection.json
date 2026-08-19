@@ -1,0 +1,64 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TargetSolutions Courses Sites API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "AccessToken",
+      "value": "{{AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sites",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve all sites",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "JSON search filter, e.g. q={\"key\":\"value\"} (documented in the developer portal FAQ)."
+              }
+            ]
+          },
+          "docs": "Retrieve all sites."
+        },
+        {
+          "info": {
+            "name": "Retrieve a specific site",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific site."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

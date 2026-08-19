@@ -1,0 +1,168 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TargetSolutions Courses Supervisor Access API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "AccessToken",
+      "value": "{{AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Supervisor Access",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve assignable profile groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/access/groups",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve assignable profile groups."
+        },
+        {
+          "info": {
+            "name": "Retrieve an assignable profile group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/access/groups/:groupid",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "groupid",
+                "value": "",
+                "type": "path",
+                "description": "Group identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve an assignable profile group."
+        },
+        {
+          "info": {
+            "name": "Retrieve groups a user manages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/access/groups",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve groups a user manages."
+        },
+        {
+          "info": {
+            "name": "Retrieve group supervisors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/access/groups/:groupid/users",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "groupid",
+                "value": "",
+                "type": "path",
+                "description": "Group identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve group supervisors."
+        },
+        {
+          "info": {
+            "name": "Grant supervisor access over a profile group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/access/groups/:groupid/users",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "groupid",
+                "value": "",
+                "type": "path",
+                "description": "Group identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Grant supervisor access over a profile group."
+        },
+        {
+          "info": {
+            "name": "Revoke supervisor access over a profile group",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/access/groups/:groupid",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              },
+              {
+                "name": "groupid",
+                "value": "",
+                "type": "path",
+                "description": "Group identifier"
+              }
+            ]
+          },
+          "docs": "Revoke supervisor access over a profile group."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

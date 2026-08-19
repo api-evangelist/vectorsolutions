@@ -1,0 +1,193 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TargetSolutions Courses Feature Access API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "AccessToken",
+      "value": "{{AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Feature Access",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve assignable application features",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/access/modules",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve assignable application features."
+        },
+        {
+          "info": {
+            "name": "Retrieve an application feature",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/access/modules/:accessmoduleid",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "accessmoduleid",
+                "value": "",
+                "type": "path",
+                "description": "Access module (application feature) identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve an application feature."
+        },
+        {
+          "info": {
+            "name": "Retrieve a user's feature access",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/access/modules",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a user's feature access."
+        },
+        {
+          "info": {
+            "name": "Retrieve a user's specific feature access",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/access/modules/:accessmoduleid",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              },
+              {
+                "name": "accessmoduleid",
+                "value": "",
+                "type": "path",
+                "description": "Access module (application feature) identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a user's specific feature access."
+        },
+        {
+          "info": {
+            "name": "Revoke access to an application feature",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/access/modules/:accessmoduleid",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              },
+              {
+                "name": "accessmoduleid",
+                "value": "",
+                "type": "path",
+                "description": "Access module (application feature) identifier"
+              }
+            ]
+          },
+          "docs": "Revoke access to an application feature."
+        },
+        {
+          "info": {
+            "name": "Retrieve users with a feature",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/access/modules/:accessmoduleid/users",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "accessmoduleid",
+                "value": "",
+                "type": "path",
+                "description": "Access module (application feature) identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve users with a feature."
+        },
+        {
+          "info": {
+            "name": "Grant access to an application feature",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/access/modules/:accessmoduleid/users",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "accessmoduleid",
+                "value": "",
+                "type": "path",
+                "description": "Access module (application feature) identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Grant access to an application feature."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

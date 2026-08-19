@@ -2,8 +2,8 @@ generated: '2026-07-21'
 method: derived
 status: candidate
 source: openapi/vectorsolutions-targetsolutions-openapi.yml
-notes: No official MCP server was found for Vector Solutions or TargetSolutions. This is a candidate tool surface
-  derived from the TargetSolutions API v1 operations documented at https://developers.targetsolutions.com/documentation/routes.
+notes: No official MCP server was found for Vector Solutions or TargetSolutions. This is a candidate tool
+  surface derived from the TargetSolutions API v1 operations documented at https://developers.targetsolutions.com/documentation/routes.
 server:
   name: vectorsolutions-targetsolutions
   transport: http
@@ -219,3 +219,9 @@ tools:
 - name: get_course_training_assignments
   description: Retrieve training assignments for a course
   source_operation: openapi/vectorsolutions-targetsolutions-openapi.yml#getCourseTrainingAssignments
+deployment:
+  mode: none
+  verified: derived
+  tools: 70
+  checked: '2026-08-12'
+  source: catalog MCP census

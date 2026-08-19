@@ -1,0 +1,118 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TargetSolutions Courses User Emails API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "AccessToken",
+      "value": "{{AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "User Emails",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve all user emails",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/emails",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve all user emails."
+        },
+        {
+          "info": {
+            "name": "Add an email address",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/emails",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add an email address."
+        },
+        {
+          "info": {
+            "name": "Retrieve a specific email",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/emails/:emailid",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              },
+              {
+                "name": "emailid",
+                "value": "",
+                "type": "path",
+                "description": "Email identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific email."
+        },
+        {
+          "info": {
+            "name": "Remove an email",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/emails/:emailid",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              },
+              {
+                "name": "emailid",
+                "value": "",
+                "type": "path",
+                "description": "Email identifier"
+              }
+            ]
+          },
+          "docs": "Remove an email."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

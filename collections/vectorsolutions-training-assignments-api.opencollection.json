@@ -1,0 +1,179 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TargetSolutions Courses Training Assignments API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "AccessToken",
+      "value": "{{AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Training Assignments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve site training assignments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/trainingassignments",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve site training assignments."
+        },
+        {
+          "info": {
+            "name": "Retrieve a specific training assignment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/trainingassignments/:transcriptid",
+            "params": [
+              {
+                "name": "transcriptid",
+                "value": "",
+                "type": "path",
+                "description": "Training assignment (transcript) identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific training assignment."
+        },
+        {
+          "info": {
+            "name": "Modify a training assignment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.targetsolutions.com/v1/trainingassignments/:transcriptid",
+            "params": [
+              {
+                "name": "transcriptid",
+                "value": "",
+                "type": "path",
+                "description": "Training assignment (transcript) identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Modify a training assignment."
+        },
+        {
+          "info": {
+            "name": "Remove a training assignment",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.targetsolutions.com/v1/trainingassignments/:transcriptid",
+            "params": [
+              {
+                "name": "transcriptid",
+                "value": "",
+                "type": "path",
+                "description": "Training assignment (transcript) identifier"
+              }
+            ]
+          },
+          "docs": "Remove a training assignment."
+        },
+        {
+          "info": {
+            "name": "Create a training assignment for a user and course",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.targetsolutions.com/v1/trainingassignments/user/:userid/course/:courseid",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              },
+              {
+                "name": "courseid",
+                "value": "",
+                "type": "path",
+                "description": "Course identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a training assignment for a user and course."
+        },
+        {
+          "info": {
+            "name": "Retrieve a user's training assignments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/trainingassignments",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a user's training assignments."
+        },
+        {
+          "info": {
+            "name": "Retrieve training assignments for a course",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/course/:courseid/trainingassignments",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "courseid",
+                "value": "",
+                "type": "path",
+                "description": "Course identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve training assignments for a course."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

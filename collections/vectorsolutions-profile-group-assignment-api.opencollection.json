@@ -1,0 +1,186 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TargetSolutions Courses Profile Group Assignment API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "AccessToken",
+      "value": "{{AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Profile Group Assignment",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve profile group members",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/categories/profile/:categoryid/groups/:groupid/users",
+            "params": [
+              {
+                "name": "categoryid",
+                "value": "",
+                "type": "path",
+                "description": "Category identifier"
+              },
+              {
+                "name": "groupid",
+                "value": "",
+                "type": "path",
+                "description": "Group identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve profile group members."
+        },
+        {
+          "info": {
+            "name": "Retrieve site profile group members",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/categories/profile/:categoryid/groups/:groupid/users",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "categoryid",
+                "value": "",
+                "type": "path",
+                "description": "Category identifier"
+              },
+              {
+                "name": "groupid",
+                "value": "",
+                "type": "path",
+                "description": "Group identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve site profile group members."
+        },
+        {
+          "info": {
+            "name": "Add a user to a profile group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/categories/profile/:categoryid/groups/:groupid/users",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "categoryid",
+                "value": "",
+                "type": "path",
+                "description": "Category identifier"
+              },
+              {
+                "name": "groupid",
+                "value": "",
+                "type": "path",
+                "description": "Group identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add a user to a profile group."
+        },
+        {
+          "info": {
+            "name": "Retrieve a user's profile groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/groups",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a user's profile groups."
+        },
+        {
+          "info": {
+            "name": "Retrieve a user's specific profile group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/groups/:groupid",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              },
+              {
+                "name": "groupid",
+                "value": "",
+                "type": "path",
+                "description": "Group identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a user's specific profile group."
+        },
+        {
+          "info": {
+            "name": "Remove a user from a profile group",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.targetsolutions.com/v1/users/:userid/groups/:groupid",
+            "params": [
+              {
+                "name": "userid",
+                "value": "",
+                "type": "path",
+                "description": "User identifier"
+              },
+              {
+                "name": "groupid",
+                "value": "",
+                "type": "path",
+                "description": "Group identifier"
+              }
+            ]
+          },
+          "docs": "Remove a user from a profile group."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

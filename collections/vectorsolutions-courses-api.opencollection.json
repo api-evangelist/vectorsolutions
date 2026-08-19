@@ -1,0 +1,108 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TargetSolutions Courses API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "AccessToken",
+      "value": "{{AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Courses",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve all courses",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/courses",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "JSON search filter, e.g. q={\"key\":\"value\"} (documented in the developer portal FAQ)."
+              }
+            ]
+          },
+          "docs": "Retrieve all courses."
+        },
+        {
+          "info": {
+            "name": "Retrieve a specific course",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/courses/:courseid",
+            "params": [
+              {
+                "name": "courseid",
+                "value": "",
+                "type": "path",
+                "description": "Course identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific course."
+        },
+        {
+          "info": {
+            "name": "Retrieve a site-specific course",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/course/:courseid",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "courseid",
+                "value": "",
+                "type": "path",
+                "description": "Course identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a site-specific course."
+        },
+        {
+          "info": {
+            "name": "Retrieve all site courses and activities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/courses",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve all site courses and activities."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

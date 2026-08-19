@@ -1,0 +1,221 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TargetSolutions Courses Profile Groups API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "AccessToken",
+      "value": "{{AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Profile Groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve groups in a profile category",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/categories/profile/:categoryid/groups",
+            "params": [
+              {
+                "name": "categoryid",
+                "value": "",
+                "type": "path",
+                "description": "Category identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve groups in a profile category."
+        },
+        {
+          "info": {
+            "name": "Retrieve site profile groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/categories/profile/:categoryid/groups",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "categoryid",
+                "value": "",
+                "type": "path",
+                "description": "Category identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve site profile groups."
+        },
+        {
+          "info": {
+            "name": "Create a profile group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/categories/profile/:categoryid/groups",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "categoryid",
+                "value": "",
+                "type": "path",
+                "description": "Category identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a profile group."
+        },
+        {
+          "info": {
+            "name": "Retrieve a profile group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/categories/profile/:categoryid/groups/:groupid",
+            "params": [
+              {
+                "name": "categoryid",
+                "value": "",
+                "type": "path",
+                "description": "Category identifier"
+              },
+              {
+                "name": "groupid",
+                "value": "",
+                "type": "path",
+                "description": "Group identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a profile group."
+        },
+        {
+          "info": {
+            "name": "Retrieve a site profile group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/categories/profile/:categoryid/groups/:groupid",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "categoryid",
+                "value": "",
+                "type": "path",
+                "description": "Category identifier"
+              },
+              {
+                "name": "groupid",
+                "value": "",
+                "type": "path",
+                "description": "Group identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a site profile group."
+        },
+        {
+          "info": {
+            "name": "Modify a profile group",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/categories/profile/:categoryid/groups/:groupid",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "categoryid",
+                "value": "",
+                "type": "path",
+                "description": "Category identifier"
+              },
+              {
+                "name": "groupid",
+                "value": "",
+                "type": "path",
+                "description": "Group identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Modify a profile group."
+        },
+        {
+          "info": {
+            "name": "Remove a profile group",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.targetsolutions.com/v1/sites/:siteid/categories/profile/:categoryid/groups/:groupid",
+            "params": [
+              {
+                "name": "siteid",
+                "value": "",
+                "type": "path",
+                "description": "Site identifier"
+              },
+              {
+                "name": "categoryid",
+                "value": "",
+                "type": "path",
+                "description": "Category identifier"
+              },
+              {
+                "name": "groupid",
+                "value": "",
+                "type": "path",
+                "description": "Group identifier"
+              }
+            ]
+          },
+          "docs": "Remove a profile group."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
