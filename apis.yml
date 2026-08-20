@@ -263,6 +263,8 @@ apis:
   humanURL: https://developers.targetsolutions.com/
   baseURL: https://api.targetsolutions.com/v1
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
