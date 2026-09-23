@@ -1,20 +1,7 @@
 {
   "provider": "vectorsolutions",
   "sources": [
-    "vectorsolutions-courses-api-openapi.yml",
-    "vectorsolutions-credential-assignment-api-openapi.yml",
-    "vectorsolutions-credential-categories-api-openapi.yml",
-    "vectorsolutions-credentials-api-openapi.yml",
-    "vectorsolutions-feature-access-api-openapi.yml",
-    "vectorsolutions-profile-categories-api-openapi.yml",
-    "vectorsolutions-profile-group-assignment-api-openapi.yml",
-    "vectorsolutions-profile-groups-api-openapi.yml",
-    "vectorsolutions-sites-api-openapi.yml",
-    "vectorsolutions-supervisor-access-api-openapi.yml",
-    "vectorsolutions-training-assignments-api-openapi.yml",
-    "vectorsolutions-user-emails-api-openapi.yml",
-    "vectorsolutions-user-history-api-openapi.yml",
-    "vectorsolutions-users-api-openapi.yml"
+    "_original/vectorsolutions-targetsolutions-openapi.yml"
   ],
   "outputs": [
     "vectorsolutions-courses-api-openapi.yml",
@@ -35,6 +22,25 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "vectorsolutions-targetsolutions-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "vectorsolutions-courses-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "vectorsolutions-credential-assignment-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "vectorsolutions-credential-categories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "vectorsolutions-credentials-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "vectorsolutions-feature-access-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "vectorsolutions-profile-categories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "vectorsolutions-profile-group-assignment-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "vectorsolutions-profile-groups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "vectorsolutions-sites-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "vectorsolutions-supervisor-access-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "vectorsolutions-training-assignments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "vectorsolutions-user-emails-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "vectorsolutions-user-history-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "vectorsolutions-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
