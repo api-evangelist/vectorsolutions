@@ -1,4 +1,4 @@
-# Vectorsolutions
+# Vector Solutions
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,143 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Vectorsolutions is a company surfaced as a portfolio company of norwest-venture-partners and added to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting the enrichment pipeline.
+Vector Solutions is a training and workforce management software company serving education, public safety, government, manufacturing, construction, and gaming industries with products including Vector LMS, Vector EHS, Vector Scheduling, Vector Check It, Acadis, Guardian Tracking, and TargetSolutions. Its TargetSolutions platform for online training and records management exposes a REST API (v1) for managing sites, users, profile groups, supervisor and feature access, credentials, courses, and training assignments, documented at developers.targetsolutions.com.
 
-Backed by: norwest-venture-partners — https://vectorsolutions.com
+**Areas:** Training · LMS · Compliance · Public Safety · Workforce Management · EHS · Education
+
+## Vector Solutions on APIs.io
+
+Everything profiled for Vector Solutions is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/vectorsolutions/](https://apis.io/providers/vectorsolutions/)** — or go straight to one of the APIs or properties below.
+
+### APIs (14)
+
+- [Vector Solutions Courses API](https://apis.io/apis/vectorsolutions/vectorsolutions-courses-api/) — The Courses API from Vector Solutions — 4 operation(s) for courses.
+- [Vector Solutions Credential Assignment API](https://apis.io/apis/vectorsolutions/vectorsolutions-credential-assignment-api/) — The Credential Assignment API from Vector Solutions — 3 operation(s) for credential assignment.
+- [Vector Solutions Credential Categories API](https://apis.io/apis/vectorsolutions/vectorsolutions-credential-categories-api/) — The Credential Categories API from Vector Solutions — 4 operation(s) for credential categories.
+- [Vector Solutions Credentials API](https://apis.io/apis/vectorsolutions/vectorsolutions-credentials-api/) — The Credentials API from Vector Solutions — 4 operation(s) for credentials.
+- [Vector Solutions Feature Access API](https://apis.io/apis/vectorsolutions/vectorsolutions-feature-access-api/) — The Feature Access API from Vector Solutions — 5 operation(s) for feature access.
+- [Vector Solutions Profile Categories API](https://apis.io/apis/vectorsolutions/vectorsolutions-profile-categories-api/) — The Profile Categories API from Vector Solutions — 4 operation(s) for profile categories.
+- [Vector Solutions Profile Group Assignment API](https://apis.io/apis/vectorsolutions/vectorsolutions-profile-group-assignment-api/) — The Profile Group Assignment API from Vector Solutions — 4 operation(s) for profile group assignment.
+- [Vector Solutions Profile Groups API](https://apis.io/apis/vectorsolutions/vectorsolutions-profile-groups-api/) — The Profile Groups API from Vector Solutions — 4 operation(s) for profile groups.
+- [Vector Solutions Sites API](https://apis.io/apis/vectorsolutions/vectorsolutions-sites-api/) — The Sites API from Vector Solutions — 2 operation(s) for sites.
+- [Vector Solutions Supervisor Access API](https://apis.io/apis/vectorsolutions/vectorsolutions-supervisor-access-api/) — The Supervisor Access API from Vector Solutions — 5 operation(s) for supervisor access.
+- [Vector Solutions Training Assignments API](https://apis.io/apis/vectorsolutions/vectorsolutions-training-assignments-api/) — The Training Assignments API from Vector Solutions — 5 operation(s) for training assignments.
+- [Vector Solutions User Emails API](https://apis.io/apis/vectorsolutions/vectorsolutions-user-emails-api/) — The User Emails API from Vector Solutions — 2 operation(s) for user emails.
+- [Vector Solutions User History API](https://apis.io/apis/vectorsolutions/vectorsolutions-user-history-api/) — The User History API from Vector Solutions — 3 operation(s) for user history.
+- [Vector Solutions Users API](https://apis.io/apis/vectorsolutions/vectorsolutions-users-api/) — The Users API from Vector Solutions — 4 operation(s) for users.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [vectorsolutions-targetsolutions](https://apis.io/servers/vectorsolutions/vectorsolutions-targetsolutions/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Vectorsolutions Agentic Access](https://apis.io/agentic-access/vectorsolutions/vectorsolutions-agentic-access/)
+
+#### Collections (14)
+
+Postman and Open Collection request collections.
+
+- [TargetSolutions Courses API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-courses-api/)
+- [TargetSolutions Courses Credential Assignment API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-credential-assignment-api/)
+- [TargetSolutions Courses Credential Categories API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-credential-categories-api/)
+- [TargetSolutions Courses Credentials API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-credentials-api/)
+- [TargetSolutions Courses Feature Access API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-feature-access-api/)
+- [TargetSolutions Courses Profile Categories API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-profile-categories-api/)
+- [TargetSolutions Courses Profile Group Assignment API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-profile-group-assignment-api/)
+- [TargetSolutions Courses Profile Groups API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-profile-groups-api/)
+- [TargetSolutions Courses Sites API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-sites-api/)
+- [TargetSolutions Courses Supervisor Access API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-supervisor-access-api/)
+- [TargetSolutions Courses Training Assignments API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-training-assignments-api/)
+- [TargetSolutions Courses User Emails API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-user-emails-api/)
+- [TargetSolutions Courses User History API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-user-history-api/)
+- [TargetSolutions Courses Users API](https://apis.io/collections/vectorsolutions/open-vectorsolutions-users-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Vectorsolutions Targetsolutions Overlay](https://apis.io/overlays/vectorsolutions/vectorsolutions-targetsolutions-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Vectorsolutions Authentication](https://apis.io/security/vectorsolutions/vectorsolutions-authentication/)
+- [Vectorsolutions Domain Security](https://apis.io/security/vectorsolutions/vectorsolutions-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://vectorsolutions.com)
+- [Documentation](https://developers.targetsolutions.com/)
+- [Getting started](https://developers.targetsolutions.com/worldoftargetsolutions)
+- [API reference](https://developers.targetsolutions.com/documentation/routes)
+- [Sign up](https://www.vectorsolutions.com/request-a-demo/)
+- [Support](https://www.vectorsolutions.com/support/)
+- [Blog](https://www.vectorsolutions.com/resources/newsroom/)
+- [Compliance](https://www.vectorsolutions.com/resources/press-releases/vector-solutions-successfully-completes-annual-soc-2-type-1-examination/)
+- [Terms of service](https://www.vectorsolutions.com/terms-of-use/)
+- [Privacy policy](https://www.vectorsolutions.com/privacy-policy/)
+
+## API Evangelist rating
+
+**Kin Score 34.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 13.9 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 66.1 |
+| Access clarity | 42.1 |
+
+**Agent readiness 23.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 29.4** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/vectorsolutions/](https://apis.io/providers/vectorsolutions/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Vector Solutions: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/vectorsolutions/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
